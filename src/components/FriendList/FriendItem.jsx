@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 const FriendCard = styled.li`
   display: flex;
@@ -22,12 +22,11 @@ const Status = styled.span`
   background-color: ${props => (props.isOnline ? 'green' : 'red')};
 `;
 
-const PictureFriend = styled.img`
+const PhotoFriend = styled.img`
   border-radius: 4px;
   border: 2px solid rgb(128, 128, 128);
 `;
 const NameFriend = styled.span`
-  font-family: 'Lato', Arial, sans-serif;
   font-style: 24px;
 `;
 
@@ -35,7 +34,7 @@ export const FriendItem = ({ friend }) => {
   return (
     <FriendCard className="item">
       <Status className="status" isOnline={friend.isOnline}></Status>
-      <PictureFriend
+      <PhotoFriend
         className="avatar"
         src={friend.avatar}
         alt="User avatar"

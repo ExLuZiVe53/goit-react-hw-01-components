@@ -13,6 +13,7 @@ const TitleUploadStats = styled.h2`
   padding: 60px;
   color: gray;
 `;
+
 const ListStats = styled.ul`
   display: flex;
   flex-wrap: nowrap;
@@ -41,7 +42,7 @@ const Percentage = styled.span`
 export const StatisticsList = ({ data }) => {
   return (
     <Section className="statistics">
-      <TitleUploadStats className="title">Upload stats</TitleUploadStats>
+      <TitleUploadStats className="title">Upload Stats</TitleUploadStats>
       <ListStats className="stat-list">
         {data.map(data => {
           let randomColor = getRandomHexColor();
