@@ -1,79 +1,74 @@
-import styled from 'styled-components';
-import { Stats } from 'components/Stats/Stats';
+import {
+  Card,
+  Description,
+  Photo,
+  Name,
+  Text,
+  Statlist,
+  StatItem,
+  Quantity,
+} from './Profile.styled';
+import PropTypes from 'prop-types';
 
-const StyledProfile = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-`;
-
-const StyledDescription = styled.div``;
-
-const StyledAvatar = styled.img`
-  width: 200px;
-`;
-
-const StyledName = styled.h1`
-  font-size: 24px;
-`;
-
-const StyledTag = styled.p`
-  font-size: 18px;
-  color: grey;
-`;
-
-const StyledLocation = styled.p`
-  font-size: 18px;
-  color: grey;
-`;
-
-export const Profile = props => {
+export const Profile = ({
+  user: {
+    avatar,
+    username,
+    tag,
+    location,
+    stats: { followers, views, likes },
+  },
+}) => {
   return (
-    <StyledProfile className="profile">
-      <StyledDescription className="description">
-        <StyledAvatar src={props.avatar} alt="User avatar" className="avatar" />
-        <StyledName className="name">{props.username}</StyledName>
-        <StyledTag className="tag">{props.tag}</StyledTag>
-        <StyledLocation className="location">{props.location}</StyledLocation>
-      </StyledDescription>
-      <Stats />
-    </StyledProfile>
+    <Card className="profile">
+      <Description className="description">
+        <Photo src={avatar} alt="User avatar" className="avatar" />
+        <Name className="name">{username}</Name>
+        <Text className="tag">{tag}</Text>
+        <Text className="location">{location}</Text>
+      </Description>
+
+      <Statlist className="stats">
+        <StatItem
+          style={{
+            borderBottomLeftRadius: '27px',
+          }}
+        >
+          <span className="label">Followers</span>
+          <Quantity className="quantity"> {followers}</Quantity>
+        </StatItem>
+        <StatItem
+          style={{
+            borderRight: '3px solid black',
+            borderLeft: '3px solid black',
+          }}
+        >
+          <span className="label">Views</span>
+          <Quantity className="quantity"> {views}</Quantity>
+        </StatItem>
+        <StatItem
+          style={{
+            borderBottomRightRadius: '27px',
+          }}
+        >
+          <span className="label">Likes</span>
+          <Quantity className="quantity"> {likes}</Quantity>
+        </StatItem>
+      </Statlist>
+    </Card>
   );
 };
 
-// export const Profile = props => {
-//   const {
-//     username,
-//     tag,
-//     location,
-//     avatar,
-//     stats: { followers, views, likes },
-//   } = props;
-//   return (
-//     <div className="profile">
-//       <div className="description">
-//         <img src={avatar} alt="User avatar" className="avatar" />
-//         <p className="name">{username}</p>
-//         <p className="tag">{tag}</p>
-//         <p className="location">{location}</p>
-//       </div>
-
-//       <ul className="stats">
-//         <li>
-//           <span className="label">Followers</span>
-//           <span className="quantity">{followers}</span>
-//         </li>
-//         <li>
-//           <span className="label">Views</span>
-//           <span className="quantity">{views}</span>
-//         </li>
-//         <li>
-//           <span className="label">Likes</span>
-//           <span className="quantity">{likes}</span>
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// };
+Profile.propTypes = {
+  user: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
+};

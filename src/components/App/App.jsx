@@ -1,4 +1,5 @@
 import user from '../json/user.json';
+import { Stats } from 'components/Stats/Stats';
 import { Profile } from '../Profile/Profile.jsx';
 
 export const App = () => {
