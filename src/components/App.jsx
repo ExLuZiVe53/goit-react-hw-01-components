@@ -16,7 +16,7 @@ export const App = () => {
         display: 'block',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 34,
         color: '#010101',
       }}
     >
