@@ -12,7 +12,7 @@ const TableTransaction = styled.table`
 `;
 
 const THeadTransaction = styled.thead`
-  background-color: #0099cc;
+  background-color: #3eb0d5;
   color: white;
   font-size: 20px;
 `;
@@ -27,7 +27,7 @@ const TBodyTransaction = styled.tbody`
 `;
 const RawOfTransaction = styled.tr`
   color: #696969;
-  font-family: 'Helvetica', Arial, sans-serif;
+
   font-size: 16px;
   padding: 10px;
   &:nth-child(odd) {

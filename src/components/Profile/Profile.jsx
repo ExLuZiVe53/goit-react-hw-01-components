@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const Card = styled.div`
-  width: 418px;
-  margin: auto;
+  width: 410px;
+  margin: 40px auto;
   margin-bottom: 50px;
   text-align: center;
 
@@ -11,7 +11,7 @@ const Card = styled.div`
 `;
 const Description = styled.div`
   background-color: #fff;
-  padding: 50px;
+  padding: 30px 15px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   border: 3px solid black;
@@ -20,17 +20,17 @@ const Description = styled.div`
 const Photo = styled.img`
   width: 200px;
   border-radius: 50%;
-  border: 5px solid purple;
+  border: 2px solid #71142a;
   padding: 10px;
 `;
 const Name = styled.p`
-  font-size: 42px;
+  font-size: 34px;
   font-weight: bold;
   margin-bottom: 20px;
 `;
 
 const Text = styled.p`
-  font-size: 36px;
+  font-size: 24px;
   color: rgba(149, 137, 137, 0.803);
   margin-bottom: 20px;
   &:last-child {
@@ -54,9 +54,11 @@ const StatItem = styled.li`
 
   background-color: #e7e0e0;
   padding: 5px;
+  color: grey;
 `;
 const Quantity = styled.span`
   font-weight: bold;
+  color: cadetblue;
 `;
 
 export const Profile = ({
@@ -84,7 +86,7 @@ export const Profile = ({
           }}
         >
           <span className="label">Followers</span>
-          <Quantity className="quantity"> {followers}</Quantity>
+          <Quantity className="quantity">{followers}</Quantity>
         </StatItem>
         <StatItem
           style={{
@@ -93,7 +95,7 @@ export const Profile = ({
           }}
         >
           <span className="label">Views</span>
-          <Quantity className="quantity"> {views}</Quantity>
+          <Quantity className="quantity">{views}</Quantity>
         </StatItem>
         <StatItem
           style={{
@@ -101,7 +103,7 @@ export const Profile = ({
           }}
         >
           <span className="label">Likes</span>
-          <Quantity className="quantity"> {likes}</Quantity>
+          <Quantity className="quantity">{likes}</Quantity>
         </StatItem>
       </Statlist>
     </Card>

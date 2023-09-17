@@ -7,7 +7,7 @@ const FriendCard = styled.li`
   margin-bottom: 10px;
   list-style: none;
   gap: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   padding: 15px;
   margin: 10px;
   background-color: #ffffff;
