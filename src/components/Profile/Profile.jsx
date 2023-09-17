@@ -53,7 +53,7 @@ const StatItem = styled.li`
   flex-direction: column;
 
   background-color: #e7e0e0;
-  padding: 5px;
+  padding: 18px;
   color: grey;
 `;
 const Quantity = styled.span`
