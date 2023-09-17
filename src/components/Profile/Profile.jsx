@@ -8,7 +8,6 @@ import {
   StatItem,
   Quantity,
 } from './Profile.styled';
-import PropTypes from 'prop-types';
 
 export const Profile = ({
   user: {

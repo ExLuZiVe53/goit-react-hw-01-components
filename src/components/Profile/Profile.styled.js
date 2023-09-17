@@ -10,7 +10,7 @@ export const Card = styled.div`
   box-shadow: 2px;
 `;
 export const Description = styled.div`
-  background-color: aquamarine;
+  background-color: #fff;
   padding: 50px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;

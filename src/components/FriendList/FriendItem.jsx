@@ -4,7 +4,6 @@ import {
   NameFriend,
   PictureFriend,
 } from './FriendItem.styled';
-import PropTypes from 'prop-types';
 
 export const FriendItem = ({ friend }) => {
   return (
