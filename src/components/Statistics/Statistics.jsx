@@ -9,10 +9,10 @@ import {
 import { getRandomHexColor } from './getRandomHexColor';
 import PropTypes from 'prop-types';
 
-export const StatisticsList = ({ data }) => {
+export const StatisticsList = ({ data, title }) => {
   return (
     <Section className="statistics">
-      <TitleUploadStats className="title">Upload Stats</TitleUploadStats>
+      {title && <TitleUploadStats>{title}</TitleUploadStats>}
       <ListStats className="stat-list">
         {data.map(data => {
           let randomColor = getRandomHexColor();

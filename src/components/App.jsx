@@ -21,7 +21,7 @@ export const App = () => {
       }}
     >
       <Profile user={user} />
-      <StatisticsList data={data} />
+      <StatisticsList data={data} title={'Upload stats'} />
       <FriendList friends={friends} />
       <Transactions items={transactions} />
     </div>
