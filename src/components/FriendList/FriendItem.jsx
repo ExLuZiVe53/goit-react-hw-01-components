@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import PropTypes from 'prop-types';
 
 const FriendCard = styled.li`
   display: flex;
@@ -43,4 +44,12 @@ export const FriendItem = ({ friend }) => {
       <NameFriend className="name">{friend.name}</NameFriend>
     </FriendCard>
   );
+};
+
+FriendItem.propTypes = {
+  friend: PropTypes.shape({
+    isOnline: PropTypes.bool.isRequired,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
