@@ -1,43 +1,13 @@
-import styled from 'styled-components';
+import {
+  Section,
+  TitleUploadStats,
+  ListStats,
+  ItemStats,
+  LabelStats,
+  Percentage,
+} from './Statistics.styled';
 import { getRandomHexColor } from './getRandomHexColor';
-
-const Section = styled.section`
-  background-color: #fff;
-  width: 600px;
-  text-align: center;
-  justify-content: center;
-  margin: auto;
-  margin-bottom: 50px;
-`;
-const TitleUploadStats = styled.h2`
-  padding: 60px;
-  color: gray;
-`;
-
-const ListStats = styled.ul`
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
-const ItemStats = styled.li`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: red;
-  margin: 0;
-  padding: 10px;
-`;
-
-const LabelStats = styled.span`
-  font-size: 24px;
-  color: white;
-`;
-const Percentage = styled.span`
-  color: white;
-`;
+import PropTypes from 'prop-types';
 
 export const StatisticsList = ({ data }) => {
   return (
